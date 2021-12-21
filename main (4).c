@@ -9,16 +9,14 @@ Code, Compile, Run and Debug online from anywhere in world.
 #include <stdio.h>
 int main()
 {
- int n, firstdigit,lastdigit,sum=0;
- printf("Enter any number: ");
- scanf("%d", &n);
-lastdigit=n%10;
-while(n>=10)
-{
-n=n/10;
-}
- firstdigit = n ;
-sum=firstdigit + lastdigit;
- printf("Sum = %d",sum);
+ int num, sum=0;
+ printf("Enter any number to find sum of its digit: ");
+ scanf("%d", &num);
+ while(num!=0)
+ {
+ sum += num % 10;
+ num = num / 10;
+ }
+ printf("Sum of digits = %d", sum);
  return 0;
 }
